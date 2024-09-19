@@ -7,7 +7,7 @@ const exchangeCodeForTokens = async (code) => {
       code,
       client_id: process.env.GOOGLE_CLIENT_ID,
       client_secret: process.env.GOOGLE_CLIENT_SECRET,
-      redirect_uri: "YOUR_REDIRECT_URI", // The same redirect URI as used in the frontend
+      redirect_uri: process.env.REDIRECT_URI, // The same redirect URI as used in the frontend
       grant_type: "authorization_code",
     });
 
